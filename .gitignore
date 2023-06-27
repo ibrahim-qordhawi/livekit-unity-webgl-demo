@@ -77,3 +77,6 @@ crashlytics-build.properties
 
 Constants.cs
 Constants.cs.meta
+
+build_linux/
+build_linux.zip
