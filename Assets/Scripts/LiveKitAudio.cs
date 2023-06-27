@@ -156,7 +156,7 @@ public class LiveKitAudio : MonoBehaviour
 
     IEnumerator SetupLiveKit()
     {
-        const string roomKey = "TestingRoom";
+        /*const string roomKey = "TestingRoom";
         var playerName = string.IsNullOrEmpty(setup.playerName)
             ? Guid.NewGuid().ToString()
             : setup.playerName;
@@ -182,7 +182,8 @@ public class LiveKitAudio : MonoBehaviour
 
                 yield return SetupLiveKitRoom(liveKitAuth.token);
             }
-        }
+        }*/
+        yield return SetupLiveKitRoom(Constants.Token);
     }
 
     IEnumerator SetupLiveKitRoom(string token)
