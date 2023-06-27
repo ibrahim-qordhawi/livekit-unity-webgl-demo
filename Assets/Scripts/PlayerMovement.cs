@@ -142,13 +142,16 @@ namespace StarterAssets
 
         }
 
-        public override void OnStartAuthority()
+#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
+    public override void OnStartAuthority()
         {
             base.OnStartAuthority();
 
             PlayerInput playerInput = GetComponent<PlayerInput>();
             playerInput.enabled = true;
         }
+#endif
+
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
