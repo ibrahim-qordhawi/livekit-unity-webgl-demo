@@ -22,6 +22,7 @@ public class LoginScript : MonoBehaviour
     public void PlayGame()
     {
         Debug.Log("Input value: " + inputField.text);
+        Constants.Token = inputField.text;
         SceneManager.LoadScene("Playground");
     }
 }
