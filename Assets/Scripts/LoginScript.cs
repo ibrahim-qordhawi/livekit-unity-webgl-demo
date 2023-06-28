@@ -7,6 +7,7 @@ using TMPro;
 public class LoginScript : MonoBehaviour
 {
     public TMP_InputField inputField;
+    public TMP_InputField portField;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,8 @@ public class LoginScript : MonoBehaviour
     {
         Debug.Log("Input value: " + inputField.text);
         Constants.Token = inputField.text;
+        Debug.Log("Port value: " + portField.text);
+        Constants.ServerPort = portField.text;
         SceneManager.LoadScene("Playground");
     }
 }
